@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Janasewa Kalyan Care Center</title>
+  <meta name="description" content="Janasewa Kalyan Care Center offers patient care, home nursing, and baby care services with compassion and professionalism." />
+  <meta name="keywords" content="Patient Care, Home Nursing, Baby Care, Caretaker Services, Janasewa Kalyan" />
+  <meta name="author" content="Janasewa Kalyan" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+  <a href="index.html">
+    <img src="./logo.png" alt="Janasewa Kalyan Logo" />
+  </a>
+</div>
+
+      <div class="hamburger"id="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li class="dropdown">
+          <a href="#">More</a>
+          <ul class="dropdown-menu">
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="overlay">
+      <h1>Compassionate Care at Your Doorstep</h1>
+      <a href="#services" class="btn">Explore Services</a>
+    </div>
+  </section>
+
+  <div class="logo-carousel-wrapper">
+  <div class="logo-carousel">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook">
+     <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+     <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook">
+     <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+  </div>
+</div>
+
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-tabs">
+      <button onclick="showService('patient')">Patient Care</button>
+      <button onclick="showService('baby')">Baby Care</button>
+      <button onclick="showService('nursing')">Nursing</button>
+    </div>
+    <div class="service-content" id="patient">
+      <h3>Patient Care</h3>
+      <p>Professional and compassionate care for patients at home to ensure comfort and recovery.</p>
+    </div>
+    <div class="service-content" id="baby" style="display:none">
+      <h3>Baby Care</h3>
+      <p>Trained staff to provide loving and attentive care for infants and toddlers.</p>
+    </div>
+    <div class="service-content" id="nursing" style="display:none">
+      <h3>Home Nursing</h3>
+      <p>Certified nurses for medication management, post-surgery support, and elder care.</p>
+    </div>
+  </section>
+
+  <div class="banner">
+    Trusted by Hundreds of Families Across the Region
+  </div>
+
+  <section class="faq" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <details>
+      <summary>What services do you provide?</summary>
+      <p>We provide patient care, baby care, and professional nursing services at home.</p>
+    </details>
+    <details>
+      <summary>Are your caregivers trained?</summary>
+      <p>Yes, all our caregivers are thoroughly trained and verified.</p>
+    </details>
+    <details>
+      <summary>How can I book your service?</summary>
+      <p>You can contact us via our registration form or WhatsApp support.</p>
+    </details>
+  </section>
+
+  <footer>
+  <div class="footer-container">
+    <div class="footer-logo">
+      <h3>Janasewa Kalyan Care Center</h3>
+      <p>&copy; 2025 | All Rights Reserved</p>
+    </div>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="#career">Career</a>
+    </div>
+  </div>
+</footer>
+
+
+  <script>
+ const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+
+    function showService(serviceId) {
+      const sections = document.querySelectorAll('.service-content');
+      sections.forEach(section => section.style.display = 'none');
+      document.getElementById(serviceId).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
